@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>High Cotton Entertainment — Cedric Britton</title>
+  <meta name="description" content="Cedric Britton — Saxophonist & Live Performance. Memphis • Mid-South • Georgia • Florida • Nationwide travel available." />
+
+  <style>
+    :root{
+      --bg:#070607;
+      --panel: rgba(255,255,255,.055);
+      --panel2: rgba(255,255,255,.07);
+      --border: rgba(255,255,255,.12);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --muted2: rgba(255,255,255,.58);
+      --gold:#d7b36a;
+      --gold2:#b58b43;
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --r:18px;
+      --r2:14px;
+      --max:1160px;
+    }
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color: var(--text);
+      background:
+        radial-gradient(1100px 520px at 20% -10%, rgba(215,179,106,.18), transparent 60%),
+        radial-gradient(900px 520px at 110% 25%, rgba(215,179,106,.10), transparent 55%),
+        linear-gradient(180deg, #060506 0%, #0a090b 60%, #050405 100%);
+      letter-spacing:.2px;
+    }
+    a{ color:inherit; text-decoration:none; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:16px; }
+
+    /* Top bar */
+    .topbar{
+      position: sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,6,7,.62);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .topbar-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 12px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+    }
+    .brand{ display:flex; align-items:center; gap:12px; min-width:0; }
+    .brand img{
+      width:46px; height:46px; border-radius:14px;
+      object-fit:cover;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      box-shadow: 0 10px 24px rgba(0,0,0,.35);
+      flex:0 0 auto;
+    }
+    .brand-text{ min-width:0; }
+    .brand-text .title{
+      font-weight:800; text-transform:uppercase; letter-spacing:.7px;
+      font-size:13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    .brand-text .sub{
+      color: var(--muted2);
+      font-size:12px; margin-top:2px;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+
+    .pill{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      font-size:13px;
+      font-weight:800;
+      cursor:pointer;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .pill:hover{ transform: translateY(-1px); background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.18); }
+    .pill.gold{
+      background: linear-gradient(180deg, rgba(215,179,106,.98), rgba(181,139,67,.98));
+      color:#120f0a;
+      border-color: rgba(255,255,255,.15);
+    }
+
+    /* Grid */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      padding-top: 16px;
+      padding-bottom: 18px;
+    }
+
+    /* Cards */
+    .card{
+      border-radius: var(--r);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.045);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .inner{ padding: 18px; }
+    h1,h2,h3{ margin:0; }
+    .serif{ font-family: ui-serif, Georgia, "Times New Roman", Times, serif; letter-spacing:.4px; font-weight:650; }
+    .muted{ color: var(--muted); line-height:1.55; }
+    .muted2{ color: var(--muted2); }
+
+    /* HERO (NO TEXT OVER IMAGE) */
+    .hero-media{
+      width:100%;
+      height: 340px; /* mobile */
+      background:#111;
+    }
+    .hero-media img{
+      width:100%; height:100%;
+      object-fit: cover;
+      object-position: center 28%;
+      display:block;
+    }
+    .hero-head{
+      padding: 16px 18px 18px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      background:
+        radial-gradient(900px 220px at 50% 120%, rgba(0,0,0,.65), transparent 65%);
+      text-align:center;
+    }
+    .hero-head .name{
+      font-size: 34px;
+      margin-bottom: 6px;
+      text-shadow: 0 14px 40px rgba(0,0,0,.45);
+    }
+    .hero-head .role{ font-size: 14px; color: rgba(255,255,255,.78); }
+    .hero-head .loc{ margin-top: 10px; font-size: 12.8px; color: rgba(255,255,255,.68); }
+
+    /* Packages */
+    .section-title{ font-size: 24px; margin-bottom: 10px; }
+    .packages{ display:flex; flex-direction:column; gap: 10px; margin-top: 12px; }
+    .pkg{
+      display:flex; align-items:center; justify-content:space-between; gap: 10px;
+      padding: 13px 14px;
+      border-radius: var(--r2);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      cursor:pointer;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .pkg:hover{ transform: translateY(-1px); background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.18); }
+    .pkg .left{ min-width:0; }
+    .pkg .name{ font-weight:900; font-size:14.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .pkg .tag{ font-size:12.5px; color: rgba(255,255,255,.62); margin-top:3px; }
+    .pkg .price{ font-weight:900; color: var(--gold); white-space:nowrap; }
+    .pkg .chev{ color: rgba(255,255,255,.55); margin-left: 8px; font-size: 18px; }
+
+    .note{
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      font-size: 12.8px;
+      color: rgba(255,255,255,.64);
+      line-height: 1.45;
+    }
+
+    /* Buttons */
+    .btn-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 12px 14px;
+      border-radius: var(--r2);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      font-weight:900;
+      cursor:pointer;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+      width: 100%;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.18); }
+    .btn.gold{
+      background: linear-gradient(180deg, rgba(215,179,106,.98), rgba(181,139,67,.98));
+      color:#120f0a;
+      border-color: rgba(255,255,255,.14);
+    }
+
+    /* Booking form */
+    form{ display:grid; gap:10px; margin-top:10px; }
+    .row2{ display:grid; grid-template-columns:1fr; gap:10px; }
+    label{ font-size:12.5px; color: rgba(255,255,255,.70); }
+    input, textarea, select{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      color: rgba(255,255,255,.92);
+      outline:none;
+      font-size: 14px;
+    }
+    textarea{ min-height: 96px; resize: vertical; }
+
+    footer{
+      text-align:center;
+      color: rgba(255,255,255,.55);
+      font-size: 12.5px;
+      padding: 18px 0 26px;
+    }
+
+    /* Modal */
+    .backdrop{
+      position:fixed; inset:0; z-index:999;
+      background: rgba(0,0,0,.72);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding: 18px;
+    }
+    .modal{
+      width: min(760px, 100%);
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(12,11,12,.92);
+      box-shadow: 0 22px 70px rgba(0,0,0,.70);
+      overflow:hidden;
+    }
+    .modal-head{
+      padding: 16px 16px 10px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .modal-head h3{ font-size:22px; }
+    .close{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      border-radius: 12px;
+      padding: 8px 10px;
+      cursor:pointer;
+      font-weight:900;
+    }
+    .modal-body{ padding: 14px 16px 16px; display:grid; gap: 12px; }
+    .callout{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      border-radius: 14px;
+      padding: 12px;
+      color: rgba(255,255,255,.80);
+      font-size: 13.5px;
+      line-height: 1.45;
+    }
+    .price-big{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 10px;
+      align-items:baseline;
+    }
+    .price-big .p{ font-weight:1000; color: var(--gold); font-size: 22px; }
+    .price-big .small{ color: rgba(255,255,255,.60); font-size: 12.5px; text-align:right; }
+
+    @media (min-width: 980px){
+      .wrap{ padding: 22px 16px; }
+      .grid{ grid-template-columns: 1.05fr .95fr; gap: 16px; }
+      .hero-media{ height: 560px; }
+      .hero-head .name{ font-size: 48px; }
+      .btn{ width:auto; min-width: 220px; }
+      .row2{ grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="High Cotton Entertainment logo" />
+        <div class="brand-text">
+          <div class="title">High Cotton Entertainment</div>
+          <div class="sub">Saxophonist • Live Performance</div>
+        </div>
+      </div>
+
+      <button class="pill gold" id="scrollBooking">Check Availability</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid">
+
+      <!-- HERO (no text over photo) -->
+      <div class="card">
+        <div class="hero-media">
+          <img src="assets/hero.jpg" alt="Cedric Britton performing saxophone" />
+        </div>
+        <div class="hero-head">
+          <div class="serif name">Cedric Britton</div>
+          <div class="role">Saxophonist &amp; Live Performance</div>
+          <div class="loc">Memphis • Mid-South • Georgia • Florida • Nationwide</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: About + Packages -->
+      <div class="card">
+        <div class="inner">
+          <h2 class="serif section-title">About Cedric Britton</h2>
+          <p class="muted">
+            Cedric Britton is a professional saxophonist delivering elevated live performances for weddings,
+            private events, corporate gatherings, and special moments nationwide.
+          </p>
+          <p class="muted">
+            Rooted in Memphis with the flexibility to travel, each performance is tailored to the room, the crowd,
+            and the energy of the moment.
+          </p>
+
+          <h2 class="serif section-title" style="margin-top:16px;">Performance Packages</h2>
+
+          <div class="packages" id="packages"></div>
+
+          <div class="note">
+            <strong>Pricing notes:</strong> All listed rates are <strong>starting prices</strong>. Final pricing may vary by date,
+            event details, and travel. <strong>Additional musicians</strong> (keys, guitar, drums, vocalist, etc.) are available for an
+            <strong>additional cost</strong>. Georgia/Florida + nationwide travel is quoted per event.
+          </div>
+
+          <!-- Download EPK under rates -->
+          <div class="btn-row">
+            <button class="btn gold" id="openBooking">Check Availability / Booking</button>
+            <a class="btn" href="assets/epk.pdf" target="_blank" rel="noopener">Download EPK</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Booking (below main grid so the top stays clean/elegant) -->
+    <section class="card" id="bookingSection">
+      <div class="inner">
+        <h2 class="serif section-title">Booking Request</h2>
+        <p class="muted">
+          Share your event details and I’ll respond with availability, travel, and final pricing.
+          If you want extra musicians, note it below.
+        </p>
+
+        <!-- Netlify form (works after you deploy to Netlify) -->
+        <form name="booking" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="booking" />
+          <input type="hidden" name="selected_package" id="selected_package" value="" />
+
+          <div class="row2">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" autocomplete="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="row2">
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" autocomplete="tel" />
+            </div>
+            <div>
+              <label for="date">Event date</label>
+              <input id="date" name="event_date" type="date" required />
+            </div>
+          </div>
+
+          <div class="row2">
+            <div>
+              <label for="city">City / State</label>
+              <input id="city" name="city_state" placeholder="Memphis, TN" required />
+            </div>
+            <div>
+              <label for="type">Event type</label>
+              <select id="type" name="event_type" required>
+                <option value="" disabled selected>Select one</option>
+                <option>Wedding</option>
+                <option>Corporate</option>
+                <option>Private party</option>
+                <option>Cocktail hour</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="details">Details (venue, time, vibe, extra musicians, etc.)</label>
+            <textarea id="details" name="details" placeholder="Example: 2-hour set, cocktail hour, would like keys + DJ, travel needed..."></textarea>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn gold" type="submit">Send Booking Request</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> High Cotton Entertainment • Memphis • Mid-South • GA • FL • Nationwide
+    </footer>
+  </main>
+
+  <!-- Package Modal -->
+  <div class="backdrop" id="backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <div class="modal-head">
+        <div>
+          <h3 class="serif" id="mTitle">Package</h3>
+          <div class="muted2" style="margin-top:4px; font-size:13px;" id="mSub"></div>
+        </div>
+        <button class="close" id="mClose" aria-label="Close">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="muted" id="mDesc"></div>
+
+        <div class="callout" id="mCallout"></div>
+
+        <div class="price-big">
+          <div class="p" id="mPrice">$—</div>
+          <div class="small">
+            <div><strong>Starting price</strong></div>
+            <div>Extra musicians + travel quoted</div>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn gold" id="choosePkg">Select this package</button>
+          <a class="btn" href="assets/epk.pdf" target="_blank" rel="noopener">Download EPK</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Packages (starting prices)
+    const PACKAGES = [
+      {
+        id: "1-hour-solo",
+        name: "1-Hour Solo Sax",
+        price: 450,
+        tag: "Ideal for cocktail hour, proposals, and intimate events",
+        desc: "One hour of live sax performance tailored to your vibe (R&B, neo-soul, jazz, pop, gospel). Includes basic planning call and set flow.",
+        included: ["1-hour live performance", "Tailored set/vibe", "Planning + arrival window", "Professional presentation"]
+      },
+      {
+        id: "2-hour",
+        name: "2-Hour Performance",
+        price: 850,
+        tag: "Best value for receptions & extended cocktail sets",
+        desc: "Two hours of live sax (can be split sets). Perfect for weddings, receptions, corporate lounges, and private parties.",
+        included: ["Up to 2 hours live sax", "Set breaks as needed", "Tailored vibe + crowd energy", "Planning + coordination"]
+      },
+      {
+        id: "wedding-cocktail",
+        name: "Wedding + Cocktail",
+        price: 950,
+        tag: "Ceremony moment + cocktail hour feel",
+        desc: "Designed for weddings: featured moments plus a smooth cocktail hour atmosphere. Timing and song moments coordinated with your schedule.",
+        included: ["Wedding-focused timing", "Featured moments", "Cocktail hour flow", "Coordination with planner/DJ"]
+      },
+      {
+        id: "3-hour",
+        name: "3-Hour Event",
+        price: 1250,
+        tag: "Full event coverage (arrival → peak energy)",
+        desc: "Three hours of live sax ideal for larger events where you want the room elevated throughout the night.",
+        included: ["Up to 3 hours live sax", "Flexible set structure", "High-energy moments", "Event coordination"]
+      },
+      {
+        id: "4-hour",
+        name: "4-Hour Event",
+        price: 1550,
+        tag: "Premium coverage for major events & weddings",
+        desc: "Four hours for maximum flexibility across cocktail hour, dinner, and peak celebration segments.",
+        included: ["Up to 4 hours live sax", "Multi-segment coverage", "Tailored vibe progression", "Priority scheduling"]
+      }
+    ];
+
+    const packagesEl = document.getElementById("packages");
+    const yearEl = document.getElementById("year");
+    yearEl.textContent = new Date().getFullYear();
+
+    // Modal elements
+    const backdrop = document.getElementById("backdrop");
+    const mTitle = document.getElementById("mTitle");
+    const mSub = document.getElementById("mSub");
+    const mDesc = document.getElementById("mDesc");
+    const mCallout = document.getElementById("mCallout");
+    const mPrice = document.getElementById("mPrice");
+    const selectedPkgInput = document.getElementById("selected_package");
+    const choosePkgBtn = document.getElementById("choosePkg");
+
+    let currentPackage = null;
+
+    function money(n){
+      return n.toLocaleString("en-US", { style:"currency", currency:"USD", maximumFractionDigits:0 });
+    }
+
+    function openModal(pkg){
+      currentPackage = pkg;
+      mTitle.textContent = pkg.name;
+      mSub.textContent = "Tap select to pre-fill your booking request.";
+      mDesc.textContent = pkg.desc;
+
+      const inc = pkg.included.map(x => `• ${x}`).join("\n");
+      mCallout.innerHTML =
+        `<strong>What you get:</strong><br><div style="white-space:pre-line; margin-top:6px;">${inc}</div>
+         <div style="margin-top:10px; color:rgba(255,255,255,.70);">
+           <strong>Pricing:</strong> This is a <strong>starting price</strong>. Final pricing may vary by date, event details, and travel.
+           Additional musicians are available for an <strong>additional cost</strong>.
+         </div>`;
+
+      mPrice.textContent = money(pkg.price);
+
+      backdrop.style.display = "flex";
+      backdrop.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(){
+      backdrop.style.display = "none";
+      backdrop.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    document.getElementById("mClose").addEventListener("click", closeModal);
+    backdrop.addEventListener("click", (e) => { if(e.target === backdrop) closeModal(); });
+
+    choosePkgBtn.addEventListener("click", () => {
+      if(!currentPackage) return;
+      selectedPkgInput.value = `${currentPackage.name} — starting at ${money(currentPackage.price)}`;
+      closeModal();
+      document.getElementById("bookingSection").scrollIntoView({ behavior:"smooth", block:"start" });
+    });
+
+    // Build package buttons
+    PACKAGES.forEach(pkg => {
+      const b = document.createElement("button");
+      b.className = "pkg";
+      b.type = "button";
+      b.innerHTML = `
+        <div class="left">
+          <div class="name">${pkg.name}</div>
+          <div class="tag">${pkg.tag}</div>
+        </div>
+        <div style="display:flex; align-items:center;">
+          <div class="price">${money(pkg.price)}</div>
+          <div class="chev">›</div>
+        </div>
+      `;
+      b.addEventListener("click", () => openModal(pkg));
+      packagesEl.appendChild(b);
+    });
+
+    // Scroll booking
+    const scrollBooking = document.getElementById("scrollBooking");
+    const openBooking = document.getElementById("openBooking");
+    function goBooking(){
+      document.getElementById("bookingSection").scrollIntoView({ behavior:"smooth", block:"start" });
+    }
+    scrollBooking.addEventListener("click", goBooking);
+    openBooking.addEventListener("click", goBooking);
+  </script>
+</body>
+</html>
